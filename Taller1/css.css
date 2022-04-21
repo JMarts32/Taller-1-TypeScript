@@ -1,0 +1,21 @@
+body,
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.elemento {
+    height: auto;
+    width: 800px;
+}
