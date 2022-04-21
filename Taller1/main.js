@@ -41,7 +41,6 @@ export const series = [
 let contador = 0;
 let totalSeasons = 0;
 for (let i = 0; i < series.length; i++) {
-    console.log(series[i].getTitle());
     document.getElementsByTagName("th")[i + 4].innerHTML = series[i].getId().toString();
     document.getElementsByTagName("td")[contador].innerHTML = series[i].getTitle();
     contador++;
