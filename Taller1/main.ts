@@ -9,7 +9,7 @@ function cargarSeries(series: Serie[]): void{
     series.forEach((serie) => {
         let elemento = document.createElement("tr");
         elemento.innerHTML = `<td>${serie.id}</td>
-        <th>${serie.title}</th>
+        <th><a href="${serie.link}">${serie.title}</a></th>
         <td>${serie.productor}</td>
         <td>${serie.seasons}</td>`
         totalSeasons += serie.seasons;

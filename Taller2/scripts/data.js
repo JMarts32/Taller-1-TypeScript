@@ -1,36 +1,5 @@
-class Serie {
-    constructor(idE, titleE, productorE, seasonsE, descriptionE, linkE, imageE) {
-        this.id = idE;
-        this.title = titleE;
-        this.productor = productorE;
-        this.seasons = seasonsE;
-        this.description = descriptionE;
-        this.link = linkE;
-        this.image = imageE;
-    }
-    getId() {
-        return this.id;
-    }
-    getTitle() {
-        return this.title;
-    }
-    getProductor() {
-        return this.productor;
-    }
-    getSeasons() {
-        return this.seasons;
-    }
-    getDescription() {
-        return this.description;
-    }
-    getLink() {
-        return this.link;
-    }
-    getImage() {
-        return this.image;
-    }
-}
-export const series = [
+import { Serie } from './series.js';
+export var series = [
     new Serie(1, "Breaking Bad", "AMC", 5, "Set and filmed in Albuquerque, New Mexico, the series tells the story of Walter White, a struggling and depressed high school chemistry teacher who is diagnosed with lung cancer", "https://www.amc.com/shows/breaking-bad", "https://i.imgur.com/GGje0vc.jpg"),
     new Serie(2, "Orange Is the New Black", "Netflix", 6, "The series begins revolving around Piper Chapman, a woman in her thirties living in New York City who is sentenced to 15 months in Litchfield Penitentiary", "https://www.netflix.com/co/title/70242311", "https://i.imgur.com/EvKe48G.jpg"),
     new Serie(3, "Game of Thrones", "HBO", 7, "American fantasy drama", "https://www.hbo.com/game-of-thrones", "https://i.imgur.com/TDCEV1S.jpg"),
@@ -38,17 +7,3 @@ export const series = [
     new Serie(5, "Sherlock", "BBC", 4, "Sherlock depicts consulting detective Sherlock Holmes (Benedict Cumberbatch) solving various mysteries in modern-day London. Holmes is assisted by his flatmate and friend, Dr John Watson (Martin Freeman), who has returned from military service in Afghanistan with the Royal Army Medical Corps", "https://www.bbc.co.uk/programmes/b018ttws", "https://i.imgur.com/02B7qhj.jpg"),
     new Serie(6, "A Very English Scandal", "BBC", 2, "A Very English Scandal is a fact-based three-part British television comedy-drama miniseries based on John Preston's book of the same name.", "https://www.bbc.co.uk/programmes/p065smy4", "https://i.imgur.com/D4y3DrQ.jpg"),
 ];
-let contador = 0;
-let totalSeasons = 0;
-for (let i = 0; i < series.length; i++) {
-    document.getElementsByTagName("th")[i + 4].innerHTML = series[i].getId().toString();
-    document.getElementsByTagName("td")[contador].innerHTML = series[i].getTitle();
-    contador++;
-    document.getElementsByTagName("td")[contador].innerHTML = series[i].getProductor();
-    contador++;
-    document.getElementsByTagName("td")[contador].innerHTML = series[i].getSeasons().toString();
-    contador++;
-    totalSeasons += series[i].getSeasons();
-}
-let average = (series.length * 3);
-document.getElementsByTagName("td")[average].innerHTML = 'Average seasons: ' + (totalSeasons / series.length).toString();
