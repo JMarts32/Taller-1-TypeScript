@@ -10,12 +10,13 @@ body {
 
 .contenedor {
     align-items: center;
-    display: flex;
     justify-content: center;
+    display: flex;
     height: 100%;
 }
 
 .elemento {
-    height: auto;
-    width: 800px;
+    height: 50%;
+    width: 500px;
+    margin: 20px;
 }
